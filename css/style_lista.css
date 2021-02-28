@@ -1,0 +1,30 @@
+.data-table-container{
+    background-color: #FFF;
+    border-radius: 2px;
+    width: 1200px;
+    margin:  50px auto;
+    font-size: 12px;
+}
+
+.data-table-container .header-tools{
+    border-bottom: solid 1px #000 ;
+    padding: 12px;
+    display: flex;
+    align-items: baseline;
+}
+
+.data-table-container .header-tools .search{
+    width: 30%;
+}
+
+.data-table-container .header-tools .search .search-input{
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: solid 1px #000;
+    color: #000;
+    
+}
+

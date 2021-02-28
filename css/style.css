@@ -21,7 +21,7 @@ body {
 }
 
 .menu {
-  background: rgb(27, 129, 212);
+  background: #1B81D5;
   height: 75px;
   display: flex;
   justify-content: space-between;

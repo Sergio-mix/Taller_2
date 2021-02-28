@@ -1,22 +1,22 @@
 ul {
   list-style: none;
-  padding: 0;
+  padding   : 0;
 }
 
 .logo {
   text-align: center;
-  font-size: 3em;
+  font-size : 3em;
 }
 
 .logo span {
-  color: rgb(27, 129, 212);
+  color: #1B81D5;
 }
 
 .contact-wrapper {
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-.contact-wrapper > * {
+.contact-wrapper>* {
   padding: 1em;
 }
 
@@ -25,7 +25,7 @@ ul {
 }
 
 .contact-form form {
-  display: grid;
+  display              : grid;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -34,7 +34,7 @@ ul {
 }
 
 .contact-form form p {
-  margin: 0;
+  margin : 0;
   padding: 1em;
 }
 
@@ -45,42 +45,41 @@ ul {
 .contact-form form button,
 .contact-form form input,
 .contact-form form textarea {
-  width: 100%;
-  padding: 0.7em;
-  border: none;
-  background: none;
-  outline: 0;
-  color: #000;
-  border-bottom: 1px solid #252;
-}
-.contact-form form button {
-  width: 100%;
-  padding: 0.7em;
-  border: none;
-  background: none;
-  outline: 0;
-  color: #fff;
+  width        : 100%;
+  padding      : 0.7em;
+  border       : none;
+  background   : none;
+  outline      : 0;
+  color        : #000;
   border-bottom: 1px solid #252;
 }
 
 .contact-form form button {
-  background: #00b4db;
-  background: -webkit-linear-gradient(to right, #0083b0, #00b4db);
-  background: linear-gradient(to right, #0083b0, #00b4db);
+  width        : 100%;
+  padding      : 0.7em;
+  border       : none;
+  background   : none;
+  outline      : 0;
+  color        : #fff;
+  border-bottom: 1px solid #252;
+}
 
-  border: 0;
+.contact-form form button {
+  background    : #1B81D5;
+  border        : 0;
   text-transform: uppercase;
-  padding: 1em;
+  padding       : 1em;
 }
 
 .contact-form form button:hover,
 .contact-form form button:focus {
-  background: #373b44;
-  background: -webkit-linear-gradient(to right, #4286f4, #373b44);
-  background: linear-gradient(to right, #4286f4, #373b44);
-  color: #fff;
+  background: #00B4DB;  
+  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  
+  background: linear-gradient(to right, #0083B0, #00B4DB);
+  
+  color     : #fff;
   transition: background-color 1s ease-out;
-  outline: 0;
+  outline   : 0;
 }
 
 @media (min-width: 700px) {
@@ -88,7 +87,7 @@ ul {
     padding: 0 4em;
   }
 
-  .contact-wrapper > * {
+  .contact-wrapper>* {
     padding: 2em;
   }
 }
