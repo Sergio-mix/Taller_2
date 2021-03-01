@@ -43,18 +43,18 @@ ul {
 }
 
 
-.contact-form form input {
+.input-on {
   width        : 100%;
   padding      : 0.7em;
   border       : none;
-  background   : none;
+  background   : none;111111
   outline      : 0;
   color        : #000;
   border-bottom: 1.5px solid #000;
 }
 
 
-.contact-form form input:focus {
+.input-on:focus {
   border-bottom: 1.5px solid #1B81D5;
 }
 
