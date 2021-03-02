@@ -11,7 +11,11 @@
   <script src="https://kit.fontawesome.com/dcd7aa07d4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
   <link rel="shortcut icon" href="icons/huellas-de-garras.png">
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
+    async></script>
+  <script src="/js/map.js"></script>
   <script src="/js/app.js" defer></script>
+
   <title>Mascotas</title>
 </head>
 
@@ -27,70 +31,91 @@
       <i class="fas fa-align-left"></i>
       </spsamp>
   </nav>
+  <!---->
   <div class="content">
     <h1 class="logo">Formulario<span> Mascotas</span></h1>
     <div class="contact-wrapper animated bounceInUp">
       <div class="contact-form">
         <h3>Registro</h3>
         <form action="">
-          <div>
+          <p>
             <label>Microchip</label>
-            <input class="input-on" type="text" name="microchip">
-          </div>
-          <div>
-            <label>Raza</label>
-            <select class="select-item" name="raza">
-              <option>Seleccione...</option>
-            </select>
-          </div>
-          <div>
-            <label>Tamaño</label>
-            <select class="select-item" name="tamaño">
-              <option>Seleccione...</option>
-            </select>
-          </div>
-          <div>
+            <input type="text" name="microchip">
+          </p>
+          <p>
             <label>Especie</label>
             <select class="select-item" name="Especie">
               <option>Seleccione...</option>
             </select>
-          </div>
-          <div>
+          </p>
+          <p>
+            <label>Tamaño</label>
+            <select class="select-item" name="tamaño">
+              <option>Seleccione...</option>
+            </select>
+          </p>
+          <p>
+            <label>Raza</label>
+            <select class="select-item" name="raza">
+              <option>Seleccione...</option>
+            </select>
+          </p>
+          <p>
             <label>Genero</label>
             <select class="select-item" name="genero">
               <option>Seleccione...</option>
             </select>
-          </div>
-          <div>
+          </p>
+          <p>
             <label>Peligrosidad</label>
             <select class="select-item" name="peligrosidad">
               <option>Seleccione...</option>
             </select>
-          </div>
-          <div>
+          </p>
+          <p>
             <label>Localidad</label>
             <select class="select-item" name="localidad">
               <option>Seleccione...</option>
             </select>
-          </div>
-          <div>
+          </p>
+          <p>
             <label>Dirección</label>
-            <input class="input-on" type="text" name="microchip">
-          </div>
-          <div>
+            <input type="text" name="direccion">
+            </dipv>
+          <p>
             <label>Fotografia</label>
             <input type="file" name="fotografia">
-          </div>
-          <div>
+          </p>
+          <p>
             <label>Propietario</label>
-            <input class="input-on" type="text" name="microchip">
+            <input type="text" name="microchip">
+          </p>
+          <div class="block">
+            <label>Localizacion actual de la mascota</label>
+            <p class="location">
+              <a id="boton-ubicacion"><i class="fas fa-map-marker-alt"></i></a>
+              <input type="text" name="ubicacion" disabled>
+            </p>
           </div>
           <div class="block">
-            <button>
+            <button id="boton-registrar">
               Registrar
             </button>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="modal_container" class="modal-container">
+    <div class="modal">
+      <h1>Google maps</h1>
+      <h3>Seleccione la ubicacion actual de su mascota y dele aceptar</h3>
+      <div id="map"> </div>
+      <div id="botones-map">
+        <button id="aceptar">Aceptar</button>
+        <button id="cancelar">Cancelar</button>
       </div>
     </div>
   </div>
