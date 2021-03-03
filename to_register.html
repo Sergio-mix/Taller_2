@@ -7,26 +7,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="https://csstools.github.io/normalize.css/11.0.0/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
-  <link rel="stylesheet" type="text/css" href="css/style_registrar.css" />
+  <link rel="stylesheet" type="text/css" href="css/style_to_register.css" />
   <script src="https://kit.fontawesome.com/dcd7aa07d4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <link rel="shortcut icon" href="icons/huellas-de-garras.png">
-
+  <link rel="shortcut icon" href="icons/claw-prints.png">
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
     async></script>
-  <script src="/js/map.js"></script>
-  <script src="/js/app.js" defer></script>
+  <script src="map.js" defer></script>
+  <script src="/js/menu.js" defer></script>
+  <script src="/js/modal.js" defer></script>
 
-  <title>Mascotas</title>
+  <title>Pets</title>
 </head>
 
 <body>
   <nav class="menu">
-    <label class="logo_Menu"> <i class="fas fa-paw"></i> Mascotas</label>
+    <label class="logo_Menu"> <i class="fas fa-paw"></i> Pets</label>
     <ul class="menu_items">
-      <li><a href="index.html">Inicio</a></li>
-      <li class="active"><a href="registrar.html">Registrar</a></li>
-      <li><a href="lista.html">Lista Animales</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="to_register.html">To register</a></li>
+      <li><a href="list.html">Animals List</a></li>
     </ul>
     <samp class="btn_menu">
       <i class="fas fa-align-left"></i>
@@ -34,7 +34,7 @@
   </nav>
   <!---->
   <div class="content">
-    <h1 class="logo">Formulario<span> Mascotas</span></h1>
+    <h1 class="logo">Morm<span> Pets</span></h1>
     <div class="contact-wrapper animated bounceInUp">
       <div class="contact-form">
         <h3>Registro</h3>
@@ -100,7 +100,7 @@
           </div>
           <div class="block">
             <button id="boton-registrar">
-              Registrar
+              Register
             </button>
           </div>
         </form>
@@ -112,8 +112,9 @@
   <div id="modal_container" class="modal-container">
     <div class="modal">
       <h1>Google maps</h1>
-      <h3>Seleccione la ubicacion actual de su mascota y dele aceptar</h3>
+      <h3>Seleccione la ubicacion actual de su mascota y presione aceptar</h3>
       <div id="map"> </div>
+      
       <div id="botones-map">
         <button id="aceptar">Aceptar</button>
         <button id="cancelar">Cancelar</button>

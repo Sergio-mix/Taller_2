@@ -5,41 +5,57 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="https://csstools.github.io/normalize.css/11.0.0/normalize.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <script src="https://kit.fontawesome.com/dcd7aa07d4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-  <link rel="shortcut icon" href="icons/huellas-de-garras.png">
-  <link rel="stylesheet" href="css/fontello.css">
-  <link rel="stylesheet" href="css/estilos.css">
-  <script src="/js/app.js" defer></script>
-  <title>Mascotas</title>
+  <link rel="shortcut icon" href="icons/claw-prints.png">
+  <link rel="stylesheet" href="css/style_index.css">
+  <script src="/js/menu.js" defer></script>
+  <title>Pets</title>
 </head>
 
+<!-- -->
 <body>
   <nav class="menu">
-    <label class="logo_Menu"> <i class="fas fa-paw"></i> Mascotas</label>
+    <label class="logo_Menu"> <i class="fas fa-paw"></i> Pets</label>
     <ul class="menu_items">
-      <li class="active"><a href="index.html">Inicio</a></li>
-      <li><a href="registrar.html">Registrar</a></li>
-      <li><a href="lista.html">Lista Animales</a></li>
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="to_register.html">To register</a></li>
+      <li><a href="list.html">Animals List</a></li>
     </ul>
     <samp class="btn_menu">
       <i class="fas fa-align-left"></i>
       </spsamp>
   </nav>
+  
 
-  <main>
-    <section id="banner">
-      <img src="https://canaltropical.co/wp-content/uploads/2020/06/mascotas-sura.jpg">
-      <div class="contenedor">
-        <h2 style="color: black">Ciudadanos de 4 Patas</h2>
-        <p style="color:black"> ¿cual es la mejor mascota para usted?
 
-        </p>
-        <a href="#">Leer mas</a>
+  
+    <div class="slide-contenedor">
+      <div class="miSlider fade">
+        <img src="images/1.jpg" alt="">
       </div>
-    </section>
+      <div class="miSlider fade">
+        <img src="images/2.jpg" alt="">
+      </div>
+      <div class="miSlider fade">
+        <img src="images/3.jpg" alt="">
+      </div>
+      <div class="direcciones">
+        <a href="#" class="atras" onclick="avanzaSlide(-1)">&#10094;</a>
+        <a href="#" class="adelante" onclick="avanzaSlide(1)">&#10095;</a>
+      </div>
+      <div class="barras">
+        <span class="barra active" onclick="posicionSlide(1)"></span>
+        <span class="barra" onclick="posicionSlide(2)"></span>
+        <span class="barra" onclick="posicionSlide(3)"></span>
+      </div>
+    </div>
+
+    <script src="/js/app.js" defer></script>
+
     <section id="bienvenidos">
       <h2>BIENVENIDO A NUESTRO CLUB</h2>
       <p>Hola! internauta bienvenid@ a nuestra pagina web. Esta es una aplicacion que permite gestionar la base de
@@ -63,13 +79,8 @@
             src="https://www.ecestaticos.com/imagestatic/clipping/af4/e93/af4e930f46677294ea8dfa3763bf5afc/las-diferencias-de-personalidad-entre-las-personas-que-viven-con-perros-y-con-gatos.jpg?mtime=1603196572">
           <h4>camina con tu mascota</h4>
         </article>
-
       </div>
-
     </section>
-  </main>
-
 </body>
-
 
 </html>

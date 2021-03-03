@@ -97,6 +97,7 @@ ul {
   padding       : 1em;
 }
 
+
 .location {
   display: flex;
 }
@@ -127,11 +128,12 @@ ul {
 
 #botones-map {
   display: flex;
+  padding: 2%;
 }
 
 
 #cancelar {
-  background-color: #47a386;
+  background-color: #1B81D5;
   border          : 0;
   border-radius   : 5px;
   box-shadow      : 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -141,14 +143,25 @@ ul {
 }
 
 #aceptar {
-  background-color: #47a386;
+  background-color: #1B81D5;
   border          : 0;
   border-radius   : 5px;
   box-shadow      : 0 2px 4px rgba(0, 0, 0, 0.2);
   color           : #fff;
   font-size       : 14px;
   padding         : 10px 25px;
+  margin          : 0 5% 0 38%;
+
 }
+
+#cancelar:hover {
+  background-color: #e03c3c;
+}
+
+#aceptar:hover {
+  background-color: #23b843;
+}
+
 
 .modal-container {
   display         : flex;
