@@ -1,3 +1,10 @@
+.container {
+  max-width   : 1170px;
+  margin-left : auto;
+  margin-right: auto;
+  padding     : 1.5em;
+}
+
 ul {
   list-style: none;
   padding   : 0;
@@ -13,7 +20,7 @@ ul {
 }
 
 .contact-wrapper {
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
 }
 
 .contact-wrapper>* {
@@ -21,7 +28,7 @@ ul {
 }
 
 .contact-form {
-  background: #fff;
+  background: #FFF;
 }
 
 .contact-form form {
@@ -33,7 +40,7 @@ ul {
   display: block;
 }
 
-.contact-form form div {
+.contact-form form p {
   margin : 0;
   padding: 1em;
 }
@@ -43,61 +50,67 @@ ul {
 }
 
 
-.input-on {
+.contact-form form input {
   width        : 100%;
-  padding      : 0.7em;
+  padding      : .7em;
   border       : none;
   background   : none;
   outline      : 0;
-  color        : #000;
-  border-bottom: 1.5px solid #000;
+  color        : #fff;
+  border-bottom: 1px solid #000;
+  display      : flexbox;
 }
 
-
-.input-on:focus {
-  border-bottom: 1.5px solid #1B81D5;
+.contact-form form input:focus {
+  border-bottom: 2px solid #1B81D5;
 }
 
-.contact-form form button {
-  width     : 100%;
-  padding   : 0.7em;
-  border    : none;
-  background: none;
-  outline   : 0;
-  color     : #fff;
+.select-item {
+  width        : 100%;
+  padding      : .7em;
+  border       : none;
+  background   : none;
+  border-bottom: 1px solid #000;
 }
 
-.contact-form form button {
+.select-item:focus {
+  border-bottom: 2px solid #1B81D5;
+}
+
+#boton-registrar {
+  width         : 100%;
+  padding       : .7em;
+  border        : none;
+  color         : #fff;
   background    : #1B81D5;
-  border        : 0;
   text-transform: uppercase;
   padding       : 1em;
 }
 
-.contact-form form button:hover,
-.contact-form form button:focus {
-  background: #00B4DB;
-  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
-  background: linear-gradient(to right, #0083B0, #00B4DB);
-
-  color     : #fff;
-  transition: background-color 1s ease-out;
-  outline   : 0;
+#boton-ubicacion {
+  width         : 15%;
+  padding       : .7em;
+  border        : none;
+  color         : #fff;
+  background    : #1B81D5;
+  text-transform: uppercase;
+  padding       : 1em;
 }
 
-.select-item {
-  width     : 100%;
-  padding   : 0.7em;
-  background: #fff;
-  border    : none;
-
-  border-bottom: 1.5px solid #000;
-
+.location {
+  display: flex;
 }
 
+#boton-registrar:hover,
+#boton-registrar:focus {
+  background: #56CCF2;
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
+  background: linear-gradient(to right, #2F80ED, #56CCF2);
+}
 
-.select-item:focus {
-  border-bottom: 1.5px solid #1B81D5;
+#boton-ubicacion:hover,
+#boton-ubicacion:focus {
+  background: #30bd6b;
 }
 
 
@@ -110,4 +123,74 @@ ul {
   .contact-wrapper>* {
     padding: 2em;
   }
+}
+
+#botones-map {
+  display: flex;
+}
+
+
+#cancelar {
+  background-color: #47a386;
+  border          : 0;
+  border-radius   : 5px;
+  box-shadow      : 0 2px 4px rgba(0, 0, 0, 0.2);
+  color           : #fff;
+  font-size       : 14px;
+  padding         : 10px 25px;
+}
+
+#aceptar {
+  background-color: #47a386;
+  border          : 0;
+  border-radius   : 5px;
+  box-shadow      : 0 2px 4px rgba(0, 0, 0, 0.2);
+  color           : #fff;
+  font-size       : 14px;
+  padding         : 10px 25px;
+}
+
+.modal-container {
+  display         : flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items     : center;
+  justify-content : center;
+  position        : fixed;
+  pointer-events  : none;
+  opacity         : 0;
+  top             : 0;
+  left            : 0;
+  height          : 100vh;
+  width           : 100vw;
+  transition      : opacity 0.3s ease;
+}
+
+.show {
+  pointer-events: auto;
+  opacity       : 1;
+}
+
+.modal {
+  background-color: #fff;
+  width           : 1200px;
+  max-width       : 100%;
+  padding         : 30px 50px;
+  border-radius   : 5px;
+  box-shadow      : 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align      : center;
+}
+
+.modal h1 {
+  margin: 0;
+}
+
+.modal p {
+  opacity  : 0.7;
+  font-size: 14px;
+}
+
+#map {
+  width : 100%;
+  height: 500px;
+
 }
