@@ -35,26 +35,32 @@ class DataTable {
     headers.forEach((element) => {
       this.headers.push(element.textContent);
     });
+
+ console.log(this.headers);
     trs.forEach((tr) => {
       const cells = [...tr.children];
 
       const item = {
         id: this.generateUUID(),
-        values: [],
+        values: []
       };
       cells.forEach((cell) => {
         if (cell.children.length > 0) {
-          // const status = [...cells.children][0].getAtrribute('class');
+ 
           const searchElement = [...cell.children][0];
-          const search = searchElement.getAttribute("class");
+          const search =searchElement.getAttribute('class');
+          if(search!=null){
+            item.values.push(`<span class='${search}'></span>`);
+         
   
-            item.values.push(cell.textContent);
-          
+        } }else{
+          item.values.push(cell.textContent);
         }
       });
       this.items.push(item);
     });
     console.log(this.items);
+   
   }
   generateUUID() {
     return (Date.now() * Math.floor(Math.random() * 100000)).toString();
