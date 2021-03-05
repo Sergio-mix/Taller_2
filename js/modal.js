@@ -1,7 +1,7 @@
 //modal
-const open = document.getElementById('boton-ubicacion');
+const open = document.getElementById('button-location');
 const modal_container = document.getElementById('modal_container');
-const close = document.getElementById('cancelar');
+const close = document.getElementById('cancel');
 
 open.addEventListener('click', () => {
   modal_container.classList.add('show');

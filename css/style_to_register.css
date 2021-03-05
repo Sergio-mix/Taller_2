@@ -56,9 +56,10 @@ ul {
   border       : none;
   background   : none;
   outline      : 0;
-  color        : #fff;
+  color        : #000;
   border-bottom: 1px solid #000;
   display      : flexbox;
+  font-size    : 90%;
 }
 
 .contact-form form input:focus {
@@ -71,13 +72,14 @@ ul {
   border       : none;
   background   : none;
   border-bottom: 1px solid #000;
+  font-size    : 90%;
 }
 
 .select-item:focus {
   border-bottom: 2px solid #1B81D5;
 }
 
-#boton-registrar {
+#button-register {
   width         : 100%;
   padding       : .7em;
   border        : none;
@@ -87,9 +89,8 @@ ul {
   padding       : 1em;
 }
 
-#boton-ubicacion {
-  width         : 15%;
-  padding       : .7em;
+#button-location {
+  width         : 10%;
   border        : none;
   color         : #fff;
   background    : #1B81D5;
@@ -102,28 +103,16 @@ ul {
   display: flex;
 }
 
-#boton-registrar:hover,
-#boton-registrar:focus {
+#button-register:hover,
+#button-register:focus {
   background: #56CCF2;
   background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
   background: linear-gradient(to right, #2F80ED, #56CCF2);
 }
 
-#boton-ubicacion:hover,
-#boton-ubicacion:focus {
+#button-location:hover,
+#button-location:focus {
   background: #30bd6b;
-}
-
-
-
-@media (min-width: 700px) {
-  .content {
-    padding: 0 4em;
-  }
-
-  .contact-wrapper>* {
-    padding: 2em;
-  }
 }
 
 #botones-map {
@@ -132,7 +121,7 @@ ul {
 }
 
 
-#cancelar {
+#cancel {
   background-color: #1B81D5;
   border          : 0;
   border-radius   : 5px;
@@ -142,7 +131,7 @@ ul {
   padding         : 10px 25px;
 }
 
-#aceptar {
+#accept {
   background-color: #1B81D5;
   border          : 0;
   border-radius   : 5px;
@@ -154,11 +143,11 @@ ul {
 
 }
 
-#cancelar:hover {
+#cancel:hover {
   background-color: #e03c3c;
 }
 
-#aceptar:hover {
+#accept:hover {
   background-color: #23b843;
 }
 
@@ -205,5 +194,16 @@ ul {
 #map {
   width : 100%;
   height: 500px;
+
+}
+
+@media (min-width: 700px) {
+  .content {
+    padding: 0 4em;
+  }
+
+  .contact-wrapper>* {
+    padding: 2em;
+  }
 
 }

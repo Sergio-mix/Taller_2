@@ -36,72 +36,68 @@ class DataTable {
       this.headers.push(element.textContent);
     });
 
- console.log(this.headers);
+    console.log(this.headers);
     trs.forEach((tr) => {
       const cells = [...tr.children];
 
       const item = {
         id: this.generateUUID(),
-        values: []
+        values: [],
       };
       cells.forEach((cell) => {
         if (cell.children.length > 0) {
- 
           const searchElement = [...cell.children][0];
-          const search =searchElement.getAttribute('class');
-          if(search!=null){
-            item.values.push(`<span class='${search}'></span>`);
-         
-  
-        } }else{
+          const search1 = searchElement.getAttribute("class");
+          if (search1 != null) {
+            item.values.push(`<span class='${search1}'></span>`);
+          }
+        } else {
           item.values.push(cell.textContent);
         }
       });
       this.items.push(item);
     });
     console.log(this.items);
-   
   }
   generateUUID() {
     return (Date.now() * Math.floor(Math.random() * 100000)).toString();
   }
-  
-  renderSearch(){
-    this.element.querySelector('.search-input').addEventListener('input',e =>{const query =e.target.value.trim().toLowerCase();
-    
-      if(query == ''){
-        this.copyItems =[this.items];
+
+  renderSearch() {
+    this.element
+      .querySelector(".search-input")
+      .addEventListener("input", (e) => {
+        const query = e.target.value.trim().toLowerCase();
+
+        if (query == "") {
+          this.copyItems = [this.items];
+          this.pagination(this.copyItems.length, this.numberOfEntries);
+          this.renderRows();
+          this.renderPagesButtons();
+          return;
+        }
+        this.search(query);
+
         this.pagination(this.copyItems.length, this.numberOfEntries);
         this.renderRows();
         this.renderPagesButtons();
-        return;
-      }
-    this.search( query);
-
-    this.pagination(this.copyItems.length, this.numberOfEntries);
-        this.renderRows();
-        this.renderPagesButtons();
-    
-    });
+      });
   }
-  search(query){
-    let res =[];
+  search(query) {
+    let res = [];
 
-    this.copyItems=[... this.items]
-    for(let i=0; i<this.copyItems.length;i++){
-      const {id,values} = this.copyItems[i];
+    this.copyItems = [...this.items];
+    for (let i = 0; i < this.copyItems.length; i++) {
+      const { id, values } = this.copyItems[i];
       const row = values;
-for(let j=0; j<row.length;j++){
-  const cell = row[j];
-  if(cell.toLowerCase().indexOf(query)>= 0){
-    res.push(this.copyItems[i]);
-    break;
-
-  }
-
-}
+      for (let j = 0; j < row.length; j++) {
+        const cell = row[j];
+        if (cell.toLowerCase().indexOf(query) >= 0) {
+          res.push(this.copyItems[i]);
+          break;
+        }
+      }
     }
-    this.copyItems= [... res];
-
+    this.copyItems = [...res];
   }
 }
