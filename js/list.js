@@ -78,7 +78,7 @@ class DataTable {
         }
         this.search(query);
 
-        this.pagination(this.copyItems.length, this.numberOfEntries);
+        this.pagination(this.copy Items.length, this.numberOfEntries);
         this.renderRows();
         this.renderPagesButtons();
       });

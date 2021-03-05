@@ -1,0 +1,46 @@
+th,
+td {
+    padding: 0.4rem !important;
+}
+
+body>div {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+}
+
+.container {
+    margin-top: 100px;
+    width     : 100%;
+}
+
+#tablax {
+    width: 100%
+}
+
+
+#map_container {
+    margin-top: 100px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
+    width     : 77.3%;
+    height    : 500px;
+    margin    : 5% 11.3%;
+}
+
+#map {
+    height: 100%;
+}
+
+.logo-map {
+    text-align: center;
+    font-size : 3em;
+}
+
+.logo-map span {
+    color: #1B81D5;
+}
+
+@media (max-width: 1270px) {
+    #map_container {
+        width : 100%;
+        margin: 5% 0;
+    }
+}
