@@ -28,68 +28,69 @@
       <i class="fas fa-align-left"></i>
       </spsamp>
   </nav>
-
-  <table id="data-table" class="data-table">
-    <thead>
-      <tr>
-        <td>Editar</td>
-        <th>Microchip</th>
-        <th>Especies</th>
-        <th>Sexo</th>
-        <th>Peligrosidad</th>
-        <th>Localidad</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="table-buton"><button <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
-        <td>22</td>
-        <td>9999999</td>
-        <td>macho</td>
-        <td>true</td>
-        <td>usaquen</td>
-      </tr>
-      <td class="table-buton"><button <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
-      <td>22</td>
-      <td>9999999</td>
-      <td>macho</td>
-      <td>true</td>
-      <td>usaquen</td>
-      </tr>
-      <tr>
-        <td class="table-buton"><button <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
-        <td>22</td>
-        <td>9999999</td>
-        <td>macho</td>
-        <td>true</td>
-        <td>usaquen</td>
-      </tr>
-      <tr>
-        <td class="table-buton"><button <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
-        <td>22</td>
-        <td>9999999</td>
-        <td>macho</td>
-        <td>true</td>
-        <td>usaquen</td>
-      </tr>
-      <tr>
-        <td class="table-buton"><button <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
-        <td>22</td>
-        <td>9999999</td>
-        <td>macho</td>
-        <td>true</td>
-        <td>usaquen</td>
-      </tr>
-      <tr>
-        <td class="table-buton"><button <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
-        <td>22</td>
-        <td>9999999</td>
-        <td>macho</td>
-        <td>true</td>
-        <td>usaquen</td>
-      </tr>
-    </tbody>
+  <div class="data-table-container">
+    <div class="header-tools">
+      <div class="search">
+        <input type="text" name="" id="" class="search-input">
+      </div>
+    </div>
+    <table class="data-table">
+      <thead>
+          <tr>
+              <th scope="col">Editar</th>
+              <th scope="col">Microchip</th>
+              <th scope="col">Species</th>
+              <th scope="col">Sex</th>
+              <th scope="col">Size</th>
+              <th scope="col">Potent Dangerous</th>
+              <th scope="col">Neighborhood</th>
+          </tr>
+      </thead>
+      <tbody id="content">
+          
+      </tbody>
   </table>
+  <script>
+    var content = document.querySelector('#content')
+
+
+         
+        fetch('/json/pets-citizens.json')
+            .then(res => res.json())
+            .then(datos => {
+                // console.log(datos)
+                tabla(datos)
+            })
+    
+    
+
+    function tabla(datos) {
+        // console.log(datos)
+        content.innerHTML = ''
+        for(let valor of datos){
+            // console.log(valor.nombre)
+            content.innerHTML += 
+            `
+        
+          <tr>
+            <th> <button <i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> </th>
+            <th>${valor.microchip}</th>
+            <th>${valor.species}</th>
+            <th>${valor.sex}</th>
+            <th>${valor.size}</th>
+            <th>${valor.potentDangerous}</th>
+            <th>${valor.neighborhood}</th>
+        
+            </tr>  
+            
+            `
+        }
+    }
+    
+
+
+</script>
+  
   <script src="js/list.js"></script>
   <script>
     const dt = new DataTable('#data-table', [
@@ -104,6 +105,31 @@
     ]);
     dt.parse();
   </script>
+     <div class="footer-tools">
+      <div class="list-items">
+        show
+        <select name="n-entries" id="n-entides" class="n-entides">
+          <option value="15">5</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+        </select>
+        entries
+      </div>
+      <div class="pages">
+        <ul>
+          <li><button class="active">1</button></li>
+          <li><button>2</button></li>
+          <li><button>3</button></li>
+          <li><button>4</button></li>
+          <li><button>5</button></li>
+          <li><button>6</button></li>
+          <li><button>7</button></li>
+          <li><button>8</button></li>
+          <li><button>9</button></li>
+          <li><button>10</button></li>
+        </ul>
+      </div>
+    </div>
 </body>
 
 </html>

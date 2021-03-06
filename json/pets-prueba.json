@@ -1,0 +1,91 @@
+[
+    {
+      "microchip": "97810108191876",
+      "species": "FELINO",
+      "sex": "HEMBRA",
+      "size": "PEQUE�O",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900032001933212",
+      "species": "CANINO",
+      "sex": "MACHO",
+      "size": "PEQUE�O",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900113000007963",
+      "species": "CANINO",
+      "sex": "MACHO",
+      "size": "MEDIANO",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900113000009612",
+      "species": "CANINO",
+      "sex": "MACHO",
+      "size": "PEQUE�O",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900113000295781",
+      "species": "CANINO",
+      "sex": "MACHO",
+      "size": "GRANDE",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900113000295784",
+      "species": "CANINO",
+      "sex": "MACHO",
+      "size": "GRANDE",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900113000295907",
+      "species": "CANINO",
+      "sex": "HEMBRA",
+      "size": "MUY GRANDE",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900113000295909",
+      "species": "CANINO",
+      "sex": "HEMBRA",
+      "size": "GRANDE",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900113000295917",
+      "species": "CANINO",
+      "sex": "HEMBRA",
+      "size": "MEDIANO",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900113000295919",
+      "species": "CANINO",
+      "sex": "MACHO",
+      "size": "MUY GRANDE",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    },
+    {
+      "microchip": "900113000295920",
+      "species": "CANINO",
+      "sex": "HEMBRA",
+      "size": "PEQUE�O",
+      "potentDangerous": "NO",
+      "neighborhood": "USAQUEN"
+    }
+ 
+     ]
