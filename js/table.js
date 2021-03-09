@@ -19,9 +19,15 @@ $(document).ready(function () {
 var data_edit = function(tbody, table){
     $(tbody).on("click", "button.edit",function(){
         var data = table.row($(this).parents("tr")).data();
+doOpen('modify.html');
+   
         console.log(data);
 
     });
 
 }
+function doOpen(url){
+        document.location.target = "_blank";
+        document.location.href=url;
+    }
 

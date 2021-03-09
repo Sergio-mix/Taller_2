@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://csstools.github.io/normalize.css/11.0.0/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style_modify.css">
+  <script src="https://kit.fontawesome.com/dcd7aa07d4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="">
+  <link rel="shortcut icon" href="icons/claw-prints.png">
+  <script src="/js/menu.js" defer></script>
+  <script src="/js/modal.js" defer></script>
+
+  <title>Pets</title>
+</head>
+
+<body>
+
+  <!--Form-->
+  <div class="content">
+    <h1 class="logo">Form<span> Pets</span></h1>
+    <div class="contact-wrapper animated bounceInUp">
+      <div class="contact-form">
+        <h3>Registry</h3>
+        <form action="">
+          <p>
+            <label>Microchip</label>
+            <input type="text" name="microchip">
+          </p>
+          <p>
+            <label>Species</label>
+            <select class="select-item" name="species">
+              <option>Please select...</option>
+            </select>
+          </p>
+          <p>
+            <label>Size</label>
+            <select class="select-item" name="size">
+              <option>Please select...</option>
+            </select>
+          </p>
+          <p>
+            <label>Race</label>
+            <select class="select-item" name="race">
+              <option>Please select...</option>
+            </select>
+          </p>
+          <p>
+            <label>Sex</label>
+            <select class="select-item" name="sex">
+              <option>Please select...</option>
+            </select>
+          </p>
+          <p>
+            <label>Dangerousness</label>
+            <select class="select-item" name="dangerousness">
+              <option>Please select...</option>
+            </select>
+          </p>
+          <p>
+            <label>Location</label>
+            <select class="select-item" name="location">
+              <option>Please select...</option>
+            </select>
+          </p>
+          <p>
+            <label>Direction</label>
+            <input type="text" name="direction">
+            </dipv>
+          <p>
+            <label>Photography</label>
+            <input type="file" name="photography">
+          </p>
+          <p>
+            <label>Owner</label>
+            <input type="text" name="owner">
+          </p>
+          <div>
+            <label>Current location of the pet</label>
+            <p class="location">
+              <a id="button-location"><i class="fas fa-map-marker-alt" style="font-size: 25px;"></i></a>
+              <input type="text" name="location" disabled>
+            </p>
+          </div>
+          <div class="block">
+            <button id="button-register" href="table.html">
+              Register
+            </button>
+          </div>
+          <div class="">
+            <a id="button-back" href="table.html">
+              Back
+            </a>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal_container" class="modal-container">
+    <div class="modal">
+      <h1>maps</h1>
+      <h3>Select the current location of your pet and press accept</h3>
+      <div id="map"></div>
+      <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+      <script src="/js/map.js"></script>
+      <div id="botones-map">
+        <button id="accept">Accept</button>
+        <button id="cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
