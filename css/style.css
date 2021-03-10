@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap");
 *,
 *:before,
 *:after {
@@ -10,7 +11,7 @@
 body {
   background: #eee;
   line-height: 1.6;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Fira Sans", sans-serif;
 }
 
 .container {
@@ -21,7 +22,7 @@ body {
 }
 
 .menu {
-  background: #1B81D5;
+  background: #1b81d5;
   height: 75px;
   display: flex;
   justify-content: space-between;
