@@ -1,5 +1,4 @@
-
-let petsList = [];
+var petsList = [];
 
 function addPets(pMicrochip, pSpecies, pSize, pRace, pSex, pDangerousness, pLocation, pDirection, pPhotography, pOwner, pLocationPet) {
     let newPet = {
@@ -14,11 +13,11 @@ function addPets(pMicrochip, pSpecies, pSize, pRace, pSex, pDangerousness, pLoca
         photography: pPhotography,
         owner: pOwner,
         locationPet: pLocationPet
-
     };
     petsList.push(newPet);
     console.log(newPet);
 }
+
 
 document.querySelector('#button-register').addEventListener('click', savePets);
 
@@ -37,11 +36,11 @@ function savePets() {
     addPets(sMicrochip, sSpecies, sSize, sRace, sSex, sDangerousness, sLocation, sDirection, sPhotography, sOwner, sLocationPet);
 }
 
-function fillSpeciesField(){
-  
-    let cbxSpecies=document.div.txtSpecies;
-    let option=document.createElement("Dog");
+function fillSpeciesField() {
 
-   cbxSpecies.appendChild(option);
-} 
+    let cbxSpecies = document.div.txtSpecies;
+    let option = document.createElement("Dog");
+
+    cbxSpecies.appendChild(option);
+}
 
