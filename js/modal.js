@@ -14,6 +14,5 @@ close.addEventListener('click', () => {
 
 ok.addEventListener('click', () => {
   modal_container.classList.remove('show');
-
   document.getElementById('txtLocationPet').value=locationPet;
 });

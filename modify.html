@@ -29,78 +29,74 @@
     <h1 class="logo">Form<span> Pets</span></h1>
     <div class="contact-wrapper animated bounceInUp">
       <div class="contact-form">
-        <h3>Registry</h3>
-        <form action="">
+        <h3>Modify</h3>
+        <form>
           <p>
             <label>Microchip</label>
-            <input type="text" name="microchip">
+            <input type="text" id="txtMicrochip" placeholder="Microchip" required>
           </p>
           <p>
             <label>Species</label>
-            <select class="select-item" name="species">
+            <select class="select-item" id="txtSpecies" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Size</label>
-            <select class="select-item" name="size">
+            <select class="select-item" id="txtSize" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Race</label>
-            <select class="select-item" name="race">
+            <select class="select-item" id="txtRace" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Sex</label>
-            <select class="select-item" name="sex">
+            <select class="select-item" id="txtSex" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Dangerousness</label>
-            <select class="select-item" name="dangerousness">
+            <select class="select-item" id="txtDangerousness" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Location</label>
-            <select class="select-item" name="location">
+            <select class="select-item" id="txtLocation" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Direction</label>
-            <input type="text" name="direction">
+            <input type="text" id="txtDirection" placeholder="Direction" required>
             </dipv>
           <p>
             <label>Photography</label>
-            <input type="file" name="photography">
+            <input type="file" id="photography" required>
           </p>
           <p>
             <label>Owner</label>
-            <input type="text" name="owner">
+            <input type="text" id="txtOwner" placeholder="Owner" required>
           </p>
           <div>
             <label>Current location of the pet</label>
             <p class="location">
               <a id="button-location"><i class="fas fa-map-marker-alt" style="font-size: 25px;"></i></a>
-              <input type="text" name="location" disabled>
+              <input type="text" id="txtLocationPet" disabled>
             </p>
           </div>
           <div class="block">
-            <button id="button-register" href="table.html">
-              Register
-            </button>
+            <input type="button" id="button-register">
           </div>
-          <div class="">
-            <a id="button-back" href="table.html">
+          <div class="block">
+            <button id="button-back">
               Back
-            </a>
-
-          </div>
+            </button>
         </form>
       </div>
     </div>
@@ -126,3 +122,5 @@
 </body>
 
 </html>
+
+<script src="/js/modify.js" defer></script>

@@ -10,7 +10,7 @@ map.on('click', function (e) {
   var popLocation = e.latlng;
   var popup = L.popup()
     .setLatLng(popLocation)
-    .setContent('<p>Latitud</p>' + e.latlng.lat + '<p>Latitud</p>' + e.latlng.lng)
+    .setContent('<p>Location pet</p>')
     .openOn(map);
   locationPet = e.latlng.lat + ',' + e.latlng.lng;
 });
