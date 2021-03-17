@@ -16,6 +16,18 @@ function addPets(pMicrochip, pSpecies, pSize, pRace, pSex, pDangerousness, pLoca
     };
     petsList.push(newPet);
     console.log(newPet);
+
+
+    const fs = require('fs');
+    const content = JSON.stringify(newPet);
+
+    fs.writeFile('/json/pets-citizens.json', content, 'utf8', function (err) {
+        if (err) {
+            return console.log(err);
+        }
+
+        console.log("The file was saved!");
+    });
 }
 
 

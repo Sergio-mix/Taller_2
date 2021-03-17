@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
     var table = $('#data-table').DataTable({
-        "ajax": "/json/pets-citizens.json",
+        "ajax": "/src/json/pets-citizens.json",
         "columns": [
             { "data": "microchip" },
             { "data": "species" },
