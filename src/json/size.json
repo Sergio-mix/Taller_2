@@ -57,7 +57,7 @@
         {"size":"mediano", "race":"Shar pei"},
         {"size":"mediano", "race":"Perro lobo herreño"},
         {"size":"mediano", "race":"Perros pitbull americanos (apbt)"},
-        {"size":"mediano", "race":"Staffordshire bull terrier"}
+        {"size":"mediano", "race":"Staffordshire bull terrier"},
 
         {"size":"grande", "race":"Akita inu"},
         {"size":"grande", "race":"Doberman"},
@@ -73,7 +73,7 @@
         {"size":"grande", "race":"Pastor belga"},
         {"size":"grande", "race":"Golden retriever"},
         {"size":"grande", "race":"Rottweiler"},
-        {"size":"grande", "race":"Perro lobo checoslovaco"}
+        {"size":"grande", "race":"Perro lobo checoslovaco"},
 
         {"size":"muygrande", "race":"San bernardo"},
         {"size":"muygrande", "race":"Presa canario"},
