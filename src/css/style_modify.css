@@ -16,7 +16,7 @@ ul {
 }
 
 .logo span {
-  color: #1b81d5;
+  color: #D90C43;
 }
 
 .contact-wrapper {
@@ -62,7 +62,7 @@ ul {
 }
 
 .contact-form form input:focus {
-  border-bottom: 2px solid #1b81d5;
+  border-bottom: 2px solid #D90C43;
 }
 
 .select-item {
@@ -75,7 +75,7 @@ ul {
 }
 
 .select-item:focus {
-  border-bottom: 2px solid #1b81d5;
+  border-bottom: 2px solid #D90C43;
 }
 
 #button-register {

@@ -16,7 +16,7 @@ ul {
 }
 
 .logo span {
-  color: #1B81D5;
+  color: #D90C43;
 }
 
 .contact-wrapper {
@@ -63,7 +63,7 @@ ul {
 }
 
 .contact-form form input:focus {
-  border-bottom: 2px solid #1B81D5;
+  border-bottom: 2px solid #D90C43;
 }
 
 .select-item {
@@ -76,7 +76,7 @@ ul {
 }
 
 .select-item:focus {
-  border-bottom: 2px solid #1B81D5;
+  border-bottom: 2px solid #D90C43;
 }
 
 #button-register {
@@ -84,7 +84,7 @@ ul {
   padding       : .7em;
   border        : none;
   color         : #fff;
-  background    : #1B81D5;
+  background    : #D90C43;
   text-transform: uppercase;
   padding       : 1em;
 }
@@ -93,7 +93,7 @@ ul {
   width         : 10%;
   border        : none;
   color         : #fff;
-  background    : #1B81D5;
+  background    : #D90C43;
   text-transform: uppercase;
   padding       : 1em;
 }
@@ -105,9 +105,10 @@ ul {
 
 #button-register:hover,
 #button-register:focus {
-  background: #56CCF2;
-  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);
-  background: linear-gradient(to right, #2F80ED, #56CCF2);
+  background: #CB356B;  
+background: -webkit-linear-gradient(to right, #BD3F32, #CB356B);  
+background: linear-gradient(to right, #BD3F32, #CB356B); 
+
 }
 
 #button-location:hover,
