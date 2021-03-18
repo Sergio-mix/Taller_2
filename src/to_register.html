@@ -18,6 +18,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
   <script src="/js/menu.js" defer></script>
   <script src="/js/modal.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous">
+</script>
   <title>Pets</title>
 </head>
 
@@ -53,13 +59,13 @@
           </p>
           <p>
             <label>Size</label>
-            <select class="select-item" id="txtSize" required>
+            <select class="select-item" id="tamaño" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Race</label>
-            <select class="select-item" id="txtRace" required>
+            <select class="select-item" id="raza" required>
               <option>Please select...</option>
             </select>
           </p>
@@ -127,4 +133,42 @@
   <script src="/js/to_register.js"></script>
 </body>
 
+<script>
+	$(document).ready(function(){
+		load_json('tamaño');
+		function load_json(id, race_id){
+			var html = '';
+
+			$.getJSON('/src/json/size.json', function(data){
+				html += '<option>Selecionar '+ id +'</option>';
+				console.log(data);
+				if(id == 'tamaño' && race_id == null){
+					for(var i = 0; i < data.size.length; i++){
+						html += '<option value='+ data.size[i].type +'>'+ data.size[i].type+ '</option>';
+					}
+				}else{
+					for(var i = 0; i < data.size.length; i++){
+						if(data.size[i].type == race_id){
+							for(var j = 0; j < data.size[i].races.length; j++){
+								html += '<option value='+ data.size[i].type +'>'+data.size[i].races[j]+ '</option>';
+							}
+						}
+					}
+				}
+
+				$('#'+id).html(html);
+			});
+			
+		}
+
+		$(document).on('change', '#tamaño', function(){
+			var race_id = $(this).val();
+			console.log(race_id);
+			if(race_id != null){
+				load_json('raza', race_id);
+			}
+		});
+
+	});
+</script>
 </html>
