@@ -19,11 +19,9 @@
   <script src="/src/js/menu.js" defer></script>
   <script src="/src/js/modal.js" defer></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous">
-</script>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+    crossorigin="anonymous">
+    </script>
   <title>Pets</title>
 </head>
 
@@ -46,14 +44,14 @@
     <div class="contact-wrapper animated bounceInUp">
       <div class="contact-form">
         <h3>Registry</h3>
-        <form>
+        <form method="post" action="receives.php">
           <p>
             <label>Microchip</label>
-            <input type="text" id="txtMicrochip" placeholder="Microchip" required>
+            <input type="text" id="txtMicrochip" name="txtMicrochip" placeholder="Microchip" required>
           </p>
           <p>
             <label>Species</label>
-            <select class="select-item" id="txtSpecies" required>
+            <select class="select-item" id="txtSpecies" name="txtSpecies" required>
               <option>Please select...</option>
               <option>CANINO</option>
               <option>FELINO</option>
@@ -61,55 +59,55 @@
           </p>
           <p>
             <label>Size</label>
-            <select class="select-item" id="txtSize" required>
+            <select class="select-item" id="txtSize" name="txtSize" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Race</label>
-            <select class="select-item" id="txtRace" required>
+            <select class="select-item" id="txtRace" name="txtRace" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Sex</label>
-            <select class="select-item" id="txtSex" required>
+            <select class="select-item" id="txtSex" name="txtSex" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Dangerousness</label>
-            <select class="select-item" id="txtDangerousness" required>
+            <select class="select-item" id="txtDangerousness" name="txtDangerousness" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Location</label>
-            <select class="select-item" id="txtLocation" required>
+            <select class="select-item" id="txtLocation" name="txtLocation" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Direction</label>
-            <input type="text" id="txtDirection" placeholder="Direction" required>
+            <input type="text" id="txtDirection" placeholder="Direction" name="txtDirection" required>
             </dipv>
           <p>
             <label>Photography</label>
-            <input type="file" id="photography" required>
+            <input type="file" id="photography" name="photography" required>
           </p>
           <p>
             <label>Owner</label>
-            <input type="text" id="txtOwner" placeholder="Owner" required>
+            <input type="text" id="txtOwner" placeholder="Owner" name="txtOwner" required>
           </p>
           <div>
             <label>Current location of the pet</label>
             <p class="location">
               <a id="button-location"><i class="fas fa-map-marker-alt" style="font-size: 25px;"></i></a>
-              <input type="text" id="txtLocationPet" disabled>
+              <input type="text" id="txtLocationPet" name="txtLocationPet" disabled>
             </p>
           </div>
           <div class="block">
-            <input type="button" id="button-register">
+            <input type="submit" id="button-register">
           </div>
         </form>
       </div>
@@ -134,4 +132,5 @@
   </div>
   <script src="/src/js/to_register.js"></script>
 </body>
+
 </html>
