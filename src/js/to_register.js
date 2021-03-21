@@ -79,8 +79,6 @@ function selectItem1(){
                 selectList();
             }else if(y[x].text=="FELINO"){
                 selectList2();
-            }else if(y[x].text=="Please select..."){
-                selectItem1();
             }
            
         } else {
