@@ -55,17 +55,19 @@
             <label>Species</label>
             <select class="select-item" id="txtSpecies" required>
               <option>Please select...</option>
+              <option>CANINO</option>
+              <option>FELINO</option>
             </select>
           </p>
           <p>
             <label>Size</label>
-            <select class="select-item" id="tamaño" required>
+            <select class="select-item" id="txtSize" required>
               <option>Please select...</option>
             </select>
           </p>
           <p>
             <label>Race</label>
-            <select class="select-item" id="raza" required>
+            <select class="select-item" id="txtRace" required>
               <option>Please select...</option>
             </select>
           </p>
@@ -132,43 +134,4 @@
   </div>
   <script src="/src/js/to_register.js"></script>
 </body>
-
-<script>
-	$(document).ready(function(){
-		load_json('tamaño');
-		function load_json(id, race_id){
-			var html = '';
-
-			$.getJSON('/src/json/size.json', function(data){
-				html += '<option>Selecionar '+ id +'</option>';
-				console.log(data);
-				if(id == 'tamaño' && race_id == null){
-					for(var i = 0; i < data.size.length; i++){
-						html += '<option value='+ data.size[i].type +'>'+ data.size[i].type+ '</option>';
-					}
-				}else{
-					for(var i = 0; i < data.size.length; i++){
-						if(data.size[i].type == race_id){
-							for(var j = 0; j < data.size[i].races.length; j++){
-								html += '<option value='+ data.size[i].type +'>'+data.size[i].races[j]+ '</option>';
-							}
-						}
-					}
-				}
-
-				$('#'+id).html(html);
-			});
-			
-		}
-
-		$(document).on('change', '#tamaño', function(){
-			var race_id = $(this).val();
-			console.log(race_id);
-			if(race_id != null){
-				load_json('raza', race_id);
-			}
-		});
-
-	});
-</script>
 </html>

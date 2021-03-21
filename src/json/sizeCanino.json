@@ -1,5 +1,5 @@
 {
-    "size": [
+    "sizeC": [
         {
             "type": "MINIATURA",
             "races": [
@@ -91,7 +91,7 @@
             ]
         },
         {
-            "type": "MUY GRANDE",
+            "type": "MUY-GRANDE",
             "races": [
                 "San bernardo",
                 "Presa canario",
@@ -111,5 +111,7 @@
                 "Mastín tibetano"
             ]
         }
+
     ]
+    
 }
