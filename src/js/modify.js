@@ -4,7 +4,7 @@ const back = document.getElementById('button-back');
 
 back.addEventListener('click', () => {
   modal_container.classList.remove('show');
-  doOpen('table.html');
+  doOpen('receives.php');
 });
 
 function doOpen(url) {

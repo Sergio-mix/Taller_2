@@ -50,7 +50,7 @@ echo "$microchip---$species---$size---$race---$sex---$dangerousness---$location-
     <ul class="menu_items">
       <li><a href="index.html">Home</a></li>
       <li><a href="to_register.html">To register</a></li>
-      <li class="active"><a href="table.html">Animals List</a></li>
+      <li class="active"><a href="receives.php">Animals List</a></li>
     </ul>
     <samp class="btn_menu">
       <i class="fas fa-align-left"></i>
@@ -70,7 +70,8 @@ echo "$microchip---$species---$size---$race---$sex---$dangerousness---$location-
           <th>Neighborhood</th>
           <th>Race</th>
           <th>Location</th>
-          <th>Owner</th>
+          <th>  <?php echo $Owner?>   </th>
+          
           <th style="width:10%" ;>Editar</th>
         </tr>
       </thead>
@@ -90,5 +91,4 @@ echo "$microchip---$species---$size---$race---$sex---$dangerousness---$location-
 
 </html>
 
-<script src="/src/js/table.js" defer></script>
 <script src="/src/js/table.js" defer></script>
