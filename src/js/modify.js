@@ -1,3 +1,4 @@
+// ESta clase modify(modificar) nos permite modificar algun valor que se encuentre en nuestra tabla para ello tenemos diferentes funciones
 
 selectItem1();
 const back = document.getElementById('button-back');
@@ -13,7 +14,7 @@ function doOpen(url) {
 }
 
 
-
+//Esta funcion guarda los datos del json en el selector de items de la pagina de modify.html
 function selectItem1(){
     const selectElement = document.querySelector('#txtSpecies');
     selectElement.addEventListener("change", (event) => {
@@ -34,7 +35,7 @@ function selectItem1(){
     });
 }
 
-
+//Esta funcion guarda los datos del json en el selector de items de la pagina de modify.html
   function selectList(){
 
 	$(document).ready(function(){
@@ -78,6 +79,7 @@ function selectItem1(){
 
 
 }
+//Esta funcion guarda los datos del json en el selector de items de la pagina de modify.html
 function selectList2(){
 
 	$(document).ready(function(){

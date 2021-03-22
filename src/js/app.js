@@ -1,3 +1,6 @@
+
+//Esta es la clase es la que se encarga de darle la logica a la pestaña del home de nuestra pagina web y es la que permite realizar el movimiento de las imagenes.
+
 let indice = 1;
 muestraSlides(indice);
 

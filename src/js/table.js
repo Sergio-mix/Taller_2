@@ -1,4 +1,6 @@
+//Esta clase nos permite cargar los datos que se encuentran en el json a la tabla 
 
+//funcion para leer y cargar los datos del json a la tabla agregando las columnas con su correspondiente registro
 $(document).ready(function () {
     var table = $('#data-table').DataTable({
         "ajax": "/src/json/pets-citizens.json",
@@ -18,7 +20,7 @@ $(document).ready(function () {
 
     data_edit("#data-table tbody", table);
 });
-
+// funcion que se le asigna el evento al boton seleccionado
 var data_edit = function (tbody, table) {
     $(tbody).on("click", "button.edit", function () {
         var data = table.row($(this).parents("tr")).data();

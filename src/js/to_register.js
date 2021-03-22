@@ -1,3 +1,5 @@
+//Esta clase de registrar nos permite como su nombre lo indica registra una mascota, esto se puede ver reflejado al oprimir el boton registrar se hara efectivo esta funcion y se puede ver reflejado el registro al abrir la consola del navegador.
+//se crea un arreglo donde estaran las especificaciones de nuestra pet
 var petsList = [];
 
 function addPets(
@@ -26,12 +28,13 @@ function addPets(
     owner: pOwner,
     locationPet: pLocationPet,
   };
+  //Agrega la mascota y posterior se muestra en consola
   petsList.push(newPet);
   console.log(newPet);
 }
 
 document.querySelector("#button-register").addEventListener("click", savePets);
-
+//Esta funcion es la que permite gurdar el registro de nuestra mascota
 function savePets() {
   let sMicrochip = document.querySelector("#txtMicrochip").value;
   let sSpecies = document.querySelector("#txtSpecies").value;
@@ -67,7 +70,7 @@ function fillSpeciesField() {
 }
 selectItem1();
 miguel();
-
+//Esta funcion guarda los datos del json en el selector de items de la pagina de to_register.html
 function selectItem1(){
     const selectElement = document.querySelector('#txtSpecies');
     selectElement.addEventListener("change", (event) => {
@@ -88,7 +91,7 @@ function selectItem1(){
     });
 }
 
-
+//Esta funcion guarda los datos del json en el selector de items de la pagina de to_register.html
   function selectList(){
 
 	$(document).ready(function(){
@@ -119,7 +122,7 @@ function selectItem1(){
 			});
 			
 		}
-
+//Esta funcion almacena los datos del json en el selector de items de la pagina de to_register.html
 		$(document).on('change', '#txtSize', function(){
 			var race_id = $(this).val();
 			console.log(race_id);
@@ -132,6 +135,7 @@ function selectItem1(){
 
 
 }
+//Esta funcion almacena los datos del json en el selector de items de la pagina de to_register.html
 function selectList2(){
 
 	$(document).ready(function(){
@@ -162,7 +166,7 @@ function selectList2(){
 			});
 			
 		}
-
+//Esta funcion almacena los datos del json en el selector de items de la pagina de to_register.html
 		$(document).on('change', '#txtSize', function(){
 			var race_id = $(this).val();
 			console.log(race_id);

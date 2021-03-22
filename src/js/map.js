@@ -1,3 +1,5 @@
+//Esta clase es la del mapa que nos va aperecer en la clase to_register.html y es la que nos recibe las coordenadas que digite el usuario para luego asi poderla enviar a la pestaña de listar animales
+
 let map = L.map('map').setView([4.6585446, -74.1039554], 11.20);
 var locationPet;
 
