@@ -65,7 +65,7 @@ $Owner = $_POST['txtOwner'];
           <th>Neighborhood</th>
           <th>Race</th>
           <th>Location</th>
-          <th>p</th>
+          <th>Owner</th>
 
           <th style="width:10%" ;>Editar</th>
         </tr>
@@ -115,7 +115,7 @@ var data_edit = function (tbody, table) {
 
 }
 
-  var fila = '<tr id="row'  + '"><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td><button type="button" class="edit btn btn-primary" onclick="doOpen("modify.html")"><i class="fa fa-pencil-square-o"></i></button>	<button type="button" class="eliminar btn btn-danger" data-toggle="modal" data-target="#modalEliminar" ><i class="fa fa-trash-o"></i></button></td></tr>';
+  var fila = '<tr id="row'  + '"><td>' + <?php echo $microchip ?> + '</td><td>' + <?php echo $species ?> + '</td><td>' + <?php echo $sex ?> + '</td><td>' + <?php echo $size ?> + '</td><td>' + <?php echo $dangerousness ?> + '</td><td>' + <?php echo $direction ?> + '</td><td>' + <?php echo $race ?> + '</td><td>' + <?php echo $location ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td><button type="button" class="edit btn btn-primary" onclick="doOpen("modify.html")"><i class="fa fa-pencil-square-o"></i></button>	<button type="button" class="eliminar btn btn-danger" data-toggle="modal" data-target="#modalEliminar" ><i class="fa fa-trash-o"></i></button></td></tr>';
   $('#data-table tr:first').after(fila);
 
   function doOpen(url) {
