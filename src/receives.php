@@ -11,7 +11,6 @@ $photography =$_POST['photography'];
 $Owner =$_POST['txtOwner'];
 
 
-echo "$microchip---$species---$size---$race---$sex---$dangerousness---$location---$direction---$photography---$Owner"
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -62,7 +61,7 @@ echo "$microchip---$species---$size---$race---$sex---$dangerousness---$location-
     <table id="data-table" class="table table-bordered">
       <thead>
         <tr>
-          <th>Microchip</th>
+        <th>Microchip</th>
           <th>Species</th>
           <th>Sex</th>
           <th>size</th>
@@ -70,7 +69,7 @@ echo "$microchip---$species---$size---$race---$sex---$dangerousness---$location-
           <th>Neighborhood</th>
           <th>Race</th>
           <th>Location</th>
-          <th>  <?php echo $Owner?>   </th>
+          <th>p</th>
           
           <th style="width:10%" ;>Editar</th>
         </tr>
@@ -92,3 +91,21 @@ echo "$microchip---$species---$size---$race---$sex---$dangerousness---$location-
 </html>
 
 <script src="/src/js/table.js" defer></script>
+<script>
+let table = document.querySelector('table');
+let template = `
+                <tr>
+                    <td>${ <?php echo $Owner?>}</td>
+                    <td>${<?php echo $Owner?>}</td>
+                    <td>${<?php echo $Owner?>}</td>
+                    <td>${<?php echo $Owner?>}</td>
+                    <td>${<?php echo $Owner?>}</td>
+                    <td>${<?php echo $Owner?>}</td>
+                    <td>${<?php echo $Owner?>}</td>
+                    <td>${<?php echo $Owner?>}</td>
+                    <td>${<?php echo $Owner?>}</td>
+                    <td><button type='button' class='edit btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button></td>
+                </tr>`;
+ 
+    table.innerHTML += template;
+</script>
