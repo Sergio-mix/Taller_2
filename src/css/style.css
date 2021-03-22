@@ -1,3 +1,7 @@
+/**
+*Esta clase es el estilo de toda la letra que contiene nuestra pagina web de igual forma el estilo del menu , se implementa diseños para que esta se vea mas estetica y tenga una buena imagen
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,300&display=swap");
 *,
 *:before,
@@ -22,7 +26,7 @@ body {
 }
 
 .menu {
-  background: #D90C43;
+  background: #d90c43;
   height: 75px;
   display: flex;
   justify-content: space-between;

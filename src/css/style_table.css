@@ -1,32 +1,32 @@
- .container {
-     margin-top: 100px;
-     width     : 100%;
-     box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
- }
+/**
+*Esta clase es el estilo de la tablade nuestra pagina web, se implementa diseños para que esta se vea mas estetica y tenga una buena imagen.
+*/
 
- #data-table {
-     width: 100%
- }
+.container {
+  margin-top: 100px;
+  width: 100%;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+}
 
+#data-table {
+  width: 100%;
+}
 
- #map_container {
-     margin-top: 100px;
-     box-shadow: 0 0 20px 0 rgba(0, 0, 0, .3);
-     width     : 77.3%;
-     height    : 500px;
-     margin    : 5% 11.3%;
- }
+#map_container {
+  margin-top: 100px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  width: 77.3%;
+  height: 500px;
+  margin: 5% 11.3%;
+}
 
- #map {
-     height: 100%;
- }
+#map {
+  height: 100%;
+}
 
-
-
- @media (max-width: 1270px) {
-     #map_container {
-         width : 100%;
-         margin: 5% 0;
-     }
-
- }
+@media (max-width: 1270px) {
+  #map_container {
+    width: 100%;
+    margin: 5% 0;
+  }
+}

@@ -1,104 +1,109 @@
+/**
+*Esta clase es el estilo de la pagina principal de nuestra pagina web, se implementa diseños para que esta se vea mas estetica y tenga una buena imagen
+*/
 
-.slide-contenedor{
-    max-width:100%;
-    max-height: 100vh;
-    width: 100%;
-    height:auto;
-    position: relative;
-    display: block;
-    overflow: hidden;
+.slide-contenedor {
+  max-width: 100%;
+  max-height: 100vh;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+  overflow: hidden;
 }
 
-
-.miSlider img{
-    width: 100%;
-    max-height: 100vh;
-    height: inherit;
-    object-fit: cover;
-    vertical-align: top;
-    transition: 2s;
+.miSlider img {
+  width: 100%;
+  max-height: 100vh;
+  height: inherit;
+  object-fit: cover;
+  vertical-align: top;
+  transition: 2s;
 }
 
-.direcciones{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 20px;
+.direcciones {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
 }
 
-.direcciones a{
-    color: #fff;
-    display: inline-block;
-    padding: 20px;
-    text-decoration: none;
+.direcciones a {
+  color: #fff;
+  display: inline-block;
+  padding: 20px;
+  text-decoration: none;
 }
 
-.direcciones a:hover{
-    background: rgba(0, 0, 0, .5);
-    transition: .5s;
+.direcciones a:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
 }
 
-.barras{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom:15px;
+.barras {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
-.barra{
-    cursor: pointer;
-    height:2px;
-    width: 25px;
-    margin: 0 2px;
-    background: #dcdde1;
-    display: inline-block;
-    margin-left: 3px;
+.barra {
+  cursor: pointer;
+  height: 2px;
+  width: 25px;
+  margin: 0 2px;
+  background: #dcdde1;
+  display: inline-block;
+  margin-left: 3px;
 }
 
-.active{
-    background-color: #e74c3c;
+.active {
+  background-color: #e74c3c;
 }
 
-.fade{
-    animation-name: fade;
-    animation-duration: 1.5s;    
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from {opacity: .4;}
-    to{opacity:1;}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #blog img {
-    width : 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 #blog h3 {
-    text-align: center;
+  text-align: center;
 }
 
 #blog .contenedor {
-    display        : flex;
-    justify-content: center;
-    flex-wrap      : wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 #blog article {
-    margin: 15px;
+  margin: 15px;
 }
 
 #blog img {
-    width    : 100%;
-    max-width: 280px;
+  width: 100%;
+  max-width: 280px;
 }
-
 
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
 /* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
@@ -113,47 +118,47 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-    font-family: "fontello";
-    font-style : normal;
-    font-weight: normal;
-    speak      : never;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
 
-    display        : inline-block;
-    text-decoration: inherit;
-    width          : 1em;
-    margin-right   : .2em;
-    text-align     : center;
-    /* opacity     : .8; */
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity     : .8; */
 
-    /* For safety - reset parent styles, that can break glyph codes*/
-    font-variant  : normal;
-    text-transform: none;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
 
-    /* fix buttons height, for twitter bootstrap */
-    line-height: 1em;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
 
-    /* Animation center compensation - margins should be symmetric */
-    /* remove if not needed */
-    margin-left: .2em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
 
-    /* you can be more comfortable with increased icons size */
-    /* font-size: 120%; */
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
 
-    /* Font smoothing. That was taken from TWBS */
-    -webkit-font-smoothing : antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    /* Uncomment for 3D effect */
-    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-guidedog:before {
-    content: '\e800';
+  content: "\e800";
 }
 
 /* '' */
 .icon-menu:before {
-    content: '\f0c9';
+  content: "\f0c9";
 }
 
 /* '' */
