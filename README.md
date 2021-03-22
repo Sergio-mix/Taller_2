@@ -13,6 +13,5 @@ _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios
 _Que cosas necesitas para instalar el software y como instalarlas_
 
 ```
-Se tiene que incializar la pagina web con php para eso deberas configurar tu editor de codigo para que se muestre de manera correcta si esta en Visual studio code te recomiendo que veas este video
-https://youtu.be/nSd5Q-xmKQo
+
 ```
