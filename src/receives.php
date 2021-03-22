@@ -1,14 +1,14 @@
-<?php 
-$microchip =$_POST['txtMicrochip'];
-$species =$_POST['txtSpecies'];
-$size=$_POST['txtSize'];
-$race =$_POST['txtRace'];
-$sex =$_POST['txtSex'];
-$dangerousness =$_POST['txtDangerousness'];
-$location =$_POST['txtLocation'];
-$direction =$_POST['txtDirection'];
-$photography =$_POST['photography'];
-$Owner =$_POST['txtOwner'];
+<?php
+$microchip = $_POST['txtMicrochip'];
+$species = $_POST['txtSpecies'];
+$size = $_POST['txtSize'];
+$race = $_POST['txtRace'];
+$sex = $_POST['txtSex'];
+$dangerousness = $_POST['txtDangerousness'];
+$location = $_POST['txtLocation'];
+$direction = $_POST['txtDirection'];
+$photography = $_POST['photography'];
+$Owner = $_POST['txtOwner'];
 
 
 ?>
@@ -23,14 +23,10 @@ $Owner =$_POST['txtOwner'];
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css" />
-  <script type="text/javascript"
-    src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css" />
+  <script type="text/javascript" src="https://cdn.datatables.net/r/bs-3.3.5/jqc-1.11.3,dt-1.10.8/datatables.min.js"></script>
   <script src="https://kit.fontawesome.com/dcd7aa07d4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
 
   <link rel="stylesheet" type="text/css" href="/src/css/style.css">
   <link rel="stylesheet" type="text/css" href="/src/css/style_table.css">
@@ -61,7 +57,7 @@ $Owner =$_POST['txtOwner'];
     <table id="data-table" class="table table-bordered">
       <thead>
         <tr>
-        <th>Microchip</th>
+          <th>Microchip</th>
           <th>Species</th>
           <th>Sex</th>
           <th>size</th>
@@ -70,7 +66,7 @@ $Owner =$_POST['txtOwner'];
           <th>Race</th>
           <th>Location</th>
           <th>p</th>
-          
+
           <th style="width:10%" ;>Editar</th>
         </tr>
       </thead>
@@ -80,9 +76,7 @@ $Owner =$_POST['txtOwner'];
   <!--- Map-->
   <div id="map_container" style="background-color: #FFF;">
     <div id="map"></div>
-    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
-      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
-      crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
     <script src="/src/js/map_2.js"></script>
   </div>
 
@@ -90,22 +84,42 @@ $Owner =$_POST['txtOwner'];
 
 </html>
 
-<script src="/src/js/table.js" defer></script>
+
 <script>
-let table = document.querySelector('table');
-let template = `
-                <tr>
-                    <td>${ <?php echo $Owner?>}</td>
-                    <td>${<?php echo $Owner?>}</td>
-                    <td>${<?php echo $Owner?>}</td>
-                    <td>${<?php echo $Owner?>}</td>
-                    <td>${<?php echo $Owner?>}</td>
-                    <td>${<?php echo $Owner?>}</td>
-                    <td>${<?php echo $Owner?>}</td>
-                    <td>${<?php echo $Owner?>}</td>
-                    <td>${<?php echo $Owner?>}</td>
-                    <td><button type='button' class='edit btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button></td>
-                </tr>`;
- 
-    table.innerHTML += template;
+
+$(document).ready(function () {
+    var table = $('#data-table').DataTable({
+        "ajax": "/src/json/pets-citizens.json",
+        "columns": [
+            { "data": "microchip" },
+            { "data": "species" },
+            { "data": "sex" },
+            { "data": "size" },
+            { "data": "potentDangerous" },
+            { "data": "neighborhood" },
+            { "defaultContent": "" },
+            { "defaultContent": "" },
+            { "defaultContent": "" },
+            { "defaultContent": "<button type='button' class='edit btn btn-primary'><i class='fa fa-pencil-square-o'></i></button>	<button type='button' class='eliminar btn btn-danger' data-toggle='modal' data-target='#modalEliminar' ><i class='fa fa-trash-o'></i></button>" }
+        ]
+    });
+
+    data_edit("#data-table tbody", table);
+});
+
+var data_edit = function (tbody, table) {
+    $(tbody).on("click", "button.edit", function () {
+        var data = table.row($(this).parents("tr")).data();
+        doOpen('modify.html');
+    });
+
+}
+
+  var fila = '<tr id="row'  + '"><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td>' + <?php echo $Owner ?> + '</td><td><button type="button" class="edit btn btn-primary" onclick="doOpen("modify.html")"><i class="fa fa-pencil-square-o"></i></button>	<button type="button" class="eliminar btn btn-danger" data-toggle="modal" data-target="#modalEliminar" ><i class="fa fa-trash-o"></i></button></td></tr>';
+  $('#data-table tr:first').after(fila);
+
+  function doOpen(url) {
+    document.location.target = "_blank";
+    document.location.href = url;
+}
 </script>
